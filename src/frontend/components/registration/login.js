@@ -130,7 +130,7 @@ const Login = (props) => {
               variant="h5"
               className={style.dashboard_kit}
             >
-              Dashboard Kit
+              Smart Ed
             </Typography>
             <Typography
               component="h1"
