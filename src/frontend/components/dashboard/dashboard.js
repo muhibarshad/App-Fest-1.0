@@ -3,7 +3,7 @@ import Side_bar from "./side_bar";
 import Page_header from "./page_header";
 import { Grid } from "@mui/material";
 import Overview from "./overview";
-import img from '../../../assets/muhib.jpg';
+import img from "../../../assets/muhib.jpg";
 const Dashboard = () => {
   const [title, set_title] = useState("Overview");
   const obj = {
@@ -45,10 +45,9 @@ const Dashboard = () => {
             collapsed={is_collapsed}
             screen={is_small_screen}
           />
-          <Overview/>
+          <Overview />
         </Grid>
       </Grid>
-
     </>
   );
 };
