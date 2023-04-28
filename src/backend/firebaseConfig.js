@@ -4,14 +4,15 @@ import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDF9B_22Lt1DErxwer2D-jLcT5FkWADgdM",
-    authDomain: "dummy-project-fc7b8.firebaseapp.com",
-    projectId: "dummy-project-fc7b8",
-    storageBucket: "dummy-project-fc7b8.appspot.com",
-    messagingSenderId: "640899484099",
-    appId: "1:640899484099:web:f6aee6b66b11998c689576",
-    measurementId: "G-TRDHM739JX"
-};
+    apiKey: "AIzaSyAHDdBtyHqvqqxGv6jdty3dRpM87iIQ93o",
+    authDomain: "app-fest-4e681.firebaseapp.com",
+    projectId: "app-fest-4e681",
+    storageBucket: "app-fest-4e681.appspot.com",
+    messagingSenderId: "843256298854",
+    appId: "1:843256298854:web:ca6814d047409a2ae29ca7",
+    measurementId: "G-LJ6T68J0Q1"
+  };
+  
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);

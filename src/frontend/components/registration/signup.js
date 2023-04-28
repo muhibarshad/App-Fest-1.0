@@ -15,9 +15,7 @@ import { useFormik } from "formik";
 import * as yup from "yup";
 import Form_helper_text from "@mui/material/FormHelperText";
 import { useNavigate } from "react-router-dom";
-import authorization from "../../../backend/authFirebase";
-import Dropdown from 'react-bootstrap/Dropdown';
-
+import dbForAuthentication from "../../../backend/firestore";
 const Signup = (props) => {
   const navigate = useNavigate();
   const [show_password, set_show_password] = useState(false);
@@ -61,15 +59,16 @@ const Signup = (props) => {
     },
     validationSchema: validation_schema,
     onSubmit: (values) => {
-      if (
-        authorization.handle_signup_email_password(
-          values.email,
-          values.password
-        )
-      ) {
-        navigate("/board");
-        console.log(values);
+      const email = values.email;
+      const name = values.firstName;
+      const status = values.lastName.toLowerCase();
+      const password = values.password;
+
+      if (dbForAuthentication.add_user(name, email, password, status)) {
+        navigate("/dashboard");
+        console.log(email, status, name, password);
       }
+      console.log(email, status, name, password);
     },
   });
   const button_style = {

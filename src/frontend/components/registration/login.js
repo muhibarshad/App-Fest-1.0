@@ -22,12 +22,13 @@ import Form_helper_text from "@mui/material/FormHelperText";
 import { FormControl } from "@mui/material";
 import { Google, Visibility, VisibilityOff } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
-import authorization from "../../../backend/authFirebase";
+import dbForAuthentication from "../../../backend/firestore";
 
 const theme1 = createTheme({});
 
 const Login = (props) => {
   const navigate = useNavigate();
+  const [status, set_status] = useState(null);
   const [auth_error_str, set_auth_error_str] = useState("");
   const [show_password, set_show_password] = useState(false);
   const handle_click_show_password = () => set_show_password(!show_password);
@@ -50,21 +51,23 @@ const Login = (props) => {
     },
     validationSchema: validation_schema,
     onSubmit: async (values) => {
-      console.log(values);
-      const user_authorization = await authorization.handle_login(
-        values.email,
-        values.password
-      );
-      if (user_authorization === true) {
-        console.log("Authorized");
-        navigate("/board");
-      } else {
-        const filteredStr = user_authorization.split("/")[1].split(")")[0];
-        set_auth_error_str(filteredStr);
-        console.log(filteredStr);
-      }
+      const email = values.email;
+      const password = values.password;
 
-      // login_handler(true);
+      const all_users = await dbForAuthentication.read_user();
+      console.log(all_users);
+      let status = null;
+      all_users.forEach((st) => {
+        if (st.email == email && st.password == password) {
+          status = st.status;
+          return;
+        }
+      });
+      console.log(status);
+      if (status) {
+        navigate("/dashboard");
+      }
+      console.log(email, password);
     },
   });
   const button_style = {

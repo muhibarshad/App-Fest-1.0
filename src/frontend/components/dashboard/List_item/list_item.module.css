@@ -1,0 +1,32 @@
+.list_item {
+  display: flex;
+  height: 7vh;
+  padding-top: 20px;
+  padding-left: 10px;
+  margin-left: -40px;
+  width: 255px;
+  color: rgba(164, 166, 179, 1);
+  background: #363740;
+  border: none;
+}
+.list_item:hover {
+  color: #dde2ff;
+  cursor: pointer;
+  background-color: #48494f;
+  border-left: 6px solid #dde2ff;
+}
+.title {
+  padding-right: 70px;
+  padding-top: 3px;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+}
+.Icon {
+  margin-right: 22px;
+  opacity: 0.4;
+}
+

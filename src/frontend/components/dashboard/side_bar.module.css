@@ -1,0 +1,47 @@
+.side_bar {
+  position: fixed;
+  width: 255px;
+  height: 135vh;
+  left: 0px;
+  top: 0px;
+  background: #363740;
+  z-index: 1;
+}
+.logo {
+  box-sizing: border-box;
+  position: absolute;
+  left: 30px;
+  top: 46px;
+  border: 10%;
+  bottom: 0px;
+  height: 3vh;
+  background: #ffffff;
+  border-radius: 100px;
+  outline: none;
+  cursor: pointer;
+}
+.dashboard_kit {
+  font-weight: bolder;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+  color: #a4a6b3;
+  opacity: 0.7;
+  cursor: pointer;
+}
+.collapsed{
+  overflow: hidden;
+  width: 50px;
+}
+.small_logo{
+  position: absolute;
+  left: 30px;
+  top: 46px;
+  border: 10%;
+  bottom: 0px;
+  height: 3vh;
+  background: #ffffff;
+  border-radius: 100px;
+  outline: none;
+  cursor: pointer;
+}
