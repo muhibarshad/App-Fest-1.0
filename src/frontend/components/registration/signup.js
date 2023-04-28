@@ -66,7 +66,12 @@ const Signup = (props) => {
       const password = values.password;
 
       if (dbForAuthentication.add_user(name, email, password, status)) {
-        navigate("/dashboard");
+        if(status=='student'){
+          navigate("/view-courses");
+        }
+        if(status=='teacher'){
+          navigate("/dashboard");
+        }
         console.log(email, status, name, password);
       }
       console.log(email, status, name, password);
@@ -76,7 +81,7 @@ const Signup = (props) => {
     height: "5vh",
     width: "35vh",
     bottom: "0px",
-    background: "#3751ff",
+    background: "#02a2a2",
     boxShadow: "0px 4px 12px rgba(55, 81, 255, 0.24)",
     borderRadius: "8px",
     cursor: "pointer",
@@ -289,7 +294,7 @@ const Signup = (props) => {
                 ml: 2,
                 ...button_style,
                 "&:hover": {
-                  backgroundColor: "#1632e2",
+                  backgroundColor: "#02a2a2",
                 },
               }}
             >

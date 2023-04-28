@@ -9,10 +9,12 @@ import Icon_button from "@mui/material/IconButton";
 import Input_base from "@mui/material/InputBase";
 import Search_icon from "@mui/icons-material/Search";
 // import img from './Assets/img1.jpg';
-import ProfileCard from "./profileCard";
+import ProfileCard from "../dashboard/profileCard";
+import AlertDismissibleExample from "./notification";
 
 const Page_header = (props) => {
   const { title, name, image } = props.details;
+  const [isNotify, set_is_notify] = useState(false);
   const [profile_show, set_profile_show] = useState(false);
   const collapsed = props.collapsed;
   const search_handler = () => {
@@ -38,6 +40,9 @@ const Page_header = (props) => {
   const drawer_width = collapsed ? 50 : 255;
   const profileHandler = () => {
     set_profile_show(!profile_show);
+  };
+  const notifyHandler = () => {
+    set_is_notify(true);
   };
 
   return (
@@ -71,7 +76,10 @@ const Page_header = (props) => {
         >
           <Search_icon />
         </Icon_button>
-        <Icon_button sx={{ color: "#C5C7CD", mr: is_small_screen ? -1 : 4 }}>
+        <Icon_button
+          sx={{ color: "#C5C7CD", mr: is_small_screen ? -1 : 4 }}
+          onClick={notifyHandler}
+        >
           <Notifications_icon />
         </Icon_button>
         {!is_small_screen && (
@@ -93,6 +101,7 @@ const Page_header = (props) => {
           onClick={profileHandler}
         />
       </Toolbar>
+      {isNotify && <AlertDismissibleExample />}
     </AppBar>
   );
 };

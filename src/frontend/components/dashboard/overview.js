@@ -2,8 +2,8 @@ import React from "react";
 import Card from "./Instructor/Card";
 import { Grid } from "@mui/material";
 import c1 from "../../../assets/c-1.jpeg";
-import c2 from "../../../assets/c-1.jpeg";
-import c3 from "../../../assets/c-1.jpeg";
+import c2 from "../../../assets/c-2.webp";
+import c3 from "../../../assets/c-3.jpeg";
 const Overview = (props) => {
   const data = [
     {
