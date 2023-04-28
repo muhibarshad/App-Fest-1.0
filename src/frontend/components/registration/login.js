@@ -138,7 +138,7 @@ const Login = (props) => {
               className={style.log_in}
               sx={{ marginTop: 3.5, marginBottom: 1.5 }}
             >
-              Log in to Dashboard Kit
+              Log in to Smart Ed
             </Typography>
             {/* <FormControl>
               <Button

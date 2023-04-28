@@ -134,7 +134,7 @@ const Signup = (props) => {
             className={style.log_in}
             sx={{ marginTop: 3.5, marginBottom: 1.5 }}
           >
-            Sign up to Dashboard Kit
+            Sign up to Smart Ed
           </Typography>
           <Stack
             component="form"
