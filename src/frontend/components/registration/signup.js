@@ -3,7 +3,7 @@ import { Typography, Avatar, Button, FormControl } from "@mui/material";
 import { Box, Container } from "@mui/system";
 import React, { useState } from "react";
 import style from "./registration.module.css";
-import logo from "../../../assets/muhib.jpg";
+import logo from "../../../assets/logo.png";
 import { Google, Visibility, VisibilityOff } from "@mui/icons-material";
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
@@ -16,6 +16,7 @@ import * as yup from "yup";
 import Form_helper_text from "@mui/material/FormHelperText";
 import { useNavigate } from "react-router-dom";
 import authorization from "../../../backend/authFirebase";
+import Dropdown from 'react-bootstrap/Dropdown';
 
 const Signup = (props) => {
   const navigate = useNavigate();
@@ -105,7 +106,7 @@ const Signup = (props) => {
           className={style.model}
           sx={{
             height: "auto",
-            minHeight: "790px",
+            minHeight: "690px",
             minWidth: "450px",
             display: "flex",
             flexDirection: "column",
@@ -136,7 +137,7 @@ const Signup = (props) => {
             autoComplete="off"
             onSubmit={formik.handleSubmit}
           >
-            <FormControl>
+            {/* <FormControl>
               <Button
                 fullWidth
                 disableElevation={true}
@@ -166,13 +167,13 @@ const Signup = (props) => {
               >
                 or
               </Typography>
-            </FormControl>
+            </FormControl> */}
             <FormControl>
               <Outlined_input
                 id="firstName"
                 type="text"
                 sx={{ mt: 2, width: "40ch" }}
-                placeholder="First Name"
+                placeholder="Full Name"
                 variant="outlined"
                 value={formik.values.firstName}
                 onChange={formik.handleChange}
@@ -189,7 +190,7 @@ const Signup = (props) => {
                 id="lastName"
                 type="text"
                 sx={{ mt: 2 }}
-                placeholder="Last Name"
+                placeholder="As a student/teacher/Institute"
                 variant="outlined"
                 value={formik.values.lastName}
                 onChange={formik.handleChange}

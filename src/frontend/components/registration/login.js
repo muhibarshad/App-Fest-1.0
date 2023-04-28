@@ -9,7 +9,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import logo from "../../../assets/muhib.jpg";
+import logo from "../../../assets/logo.png";
 import style from "./registration.module.css";
 import Input_label from "@mui/material/InputLabel";
 import Input_adornment from "@mui/material/InputAdornment";
@@ -100,7 +100,7 @@ const Login = (props) => {
           className={style.model}
           disableGutters={true}
           sx={{
-            marginTop: 10,
+            marginTop: 18,
             height: "auto",
             minHeight: "600px",
           }}
@@ -134,7 +134,7 @@ const Login = (props) => {
             >
               Log in to Dashboard Kit
             </Typography>
-            <FormControl>
+            {/* <FormControl>
               <Button
                 fullWidth
                 disableElevation={true}
@@ -169,7 +169,7 @@ const Login = (props) => {
               >
                 or
               </Typography>
-            </FormControl>
+            </FormControl> */}
             <Typography
               component="h1"
               variant="subtitle1"
