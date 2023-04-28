@@ -7,9 +7,6 @@ import Confirmation_number_icon from '@mui/icons-material/ConfirmationNumber';
 import Lightbulb_icon from '@mui/icons-material/Lightbulb';
 import Contact_emergency_icon from '@mui/icons-material/ContactEmergency';
 import Support_agent_icon from '@mui/icons-material/SupportAgent';
-import Library_books_icon from '@mui/icons-material/LibraryBooks';
-import Settings_icon from '@mui/icons-material/Settings';
-import Workspace_premium_icon from '@mui/icons-material/WorkspacePremium';
 
 const List_side_bar=props=>{
   const title_handler=props.title_handler;
@@ -18,20 +15,14 @@ const List_side_bar=props=>{
     {icon: <Confirmation_number_icon />},
     {icon: <Lightbulb_icon/>},
     {icon: <Contact_emergency_icon/>},
-    {icon: <Support_agent_icon/>},
-    {icon: <Library_books_icon/>},
-    {icon: <Settings_icon/>},
-    {icon: <Workspace_premium_icon/>},
+    {icon: <Support_agent_icon/>}
   ];
   const links=[
     {link: '/Overview'},
-    {link: '/Tickets'},
-    {link: '/Ideas'},
-    {link: '/Contacts'},
-    {link: '/Agents'},
-    {link: '/Articles'},
-    {link: '/Settings'},
-    {link: '/Subscription'},
+    {link: '/create-course'},
+    {link: '/manage-course'},
+    {link: '/assignments'},
+    {link: '/secuduled-online-classes'},
   ];
 
   return <Fragment>
@@ -52,7 +43,7 @@ const List_side_bar=props=>{
       } title_handler={title_handler}/>
       <List_item item={
         {
-          title: 'Manage Course',
+          title: 'Manage Courses',
           icon: icons[2].icon,
           link: links[2].link,
         }
@@ -71,28 +62,6 @@ const List_side_bar=props=>{
           link: links[4].link,
         }
       } title_handler={title_handler}/>
-      {/* <List_item item={
-        {
-          title: 'Articles',
-          icon: icons[5].icon,
-          link: links[5].link,
-        }
-      } title_handler={title_handler}/>
-      <hr className={list_style.hr}/>
-      <List_item item={
-        {
-          title: 'Settings',
-          icon: icons[6].icon,
-          link: links[6].link,
-        }
-      } title_handler={title_handler}/>
-      <List_item item={
-        {
-          title: 'Subscription',
-          icon: icons[7].icon,
-          link: links[7].link,
-        }
-      } title_handler={title_handler}/> */}
     </ul>
   </Fragment>;
 };

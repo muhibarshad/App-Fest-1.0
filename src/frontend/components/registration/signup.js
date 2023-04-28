@@ -16,6 +16,7 @@ import * as yup from "yup";
 import Form_helper_text from "@mui/material/FormHelperText";
 import { useNavigate } from "react-router-dom";
 import dbForAuthentication from "../../../backend/firestore";
+
 const Signup = (props) => {
   const navigate = useNavigate();
   const [show_password, set_show_password] = useState(false);

@@ -5,15 +5,15 @@
   padding-left: 10px;
   margin-left: -40px;
   width: 255px;
-  color: rgba(164, 166, 179, 1);
-  background: #363740;
+  color: rgb(72, 73, 77);
+  background: #cadbe6;
   border: none;
 }
 .list_item:hover {
   color: #dde2ff;
   cursor: pointer;
-  background-color: #48494f;
-  border-left: 6px solid #dde2ff;
+  background-color: #95acbd;
+  border-left: 6px solid rgb(72, 73, 77);
 }
 .title {
   padding-right: 70px;

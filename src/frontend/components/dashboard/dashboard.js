@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import Side_bar from "./side_bar";
 import Page_header from "./page_header";
 import { Grid } from "@mui/material";
-
+import Overview from "./overview";
+import img from '../../../assets/muhib.jpg';
 const Dashboard = () => {
   const [title, set_title] = useState("Overview");
   const obj = {
     title: title,
     name: "Muhib",
-    image: "./Assets/img1.jpg",
+    image: img,
   };
   const title_handler = (title_name) => {
     set_title(title_name);
@@ -44,8 +45,10 @@ const Dashboard = () => {
             collapsed={is_collapsed}
             screen={is_small_screen}
           />
+          <Overview/>
         </Grid>
       </Grid>
+
     </>
   );
 };

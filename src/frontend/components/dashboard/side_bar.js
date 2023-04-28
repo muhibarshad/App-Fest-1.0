@@ -43,7 +43,7 @@ const Side_bar = props=>{
                 color="inherit"
                 aria-label="open drawer"
               >
-                <Menu_icon fontSize="large" sx={{color: '#F7F8FC'}} />
+                <Menu_icon fontSize="large" sx={{color: 'rgb(72, 73, 77)'}} />
               </Icon_button>
             </Grid>
             <Grid item lg={3} md={3} sm={3} xs={3} sx={{mt: 1}}
