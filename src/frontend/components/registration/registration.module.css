@@ -1,0 +1,75 @@
+.model {
+  box-sizing: border-box;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #dfe0eb;
+  border-radius: 8px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+.dashboard_kit {
+  height: 24px;
+  font-weight: bolder;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+  color: #a4a6b3;
+  opacity: 0.7;
+}
+.log_in {
+  height: 30px;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.3px;
+  color: #252733;
+}
+.enter_email {
+  height: 20px;
+  font-weight: 600;
+  font-size: 14.5px;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+}
+.label {
+  height: 18px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+.forget_password {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 13px;
+  text-align: right;
+  letter-spacing: 0.1px;
+  cursor: pointer;
+}
+.sign_up {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #3751ff;
+  cursor: pointer;
+  margin-left: 20px;
+  text-decoration: none;
+}
+.layout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #363740;
+}
+.color {
+  color: #9fa2b4;
+}
